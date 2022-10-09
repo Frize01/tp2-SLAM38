@@ -2,6 +2,7 @@
 
 namespace models;
 
+use PDO;
 use models\base\SQL;
 use models\classes\Client;
 

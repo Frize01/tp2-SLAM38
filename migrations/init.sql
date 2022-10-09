@@ -4,7 +4,7 @@ DROP TABLE IF EXISTS produit;
 DROP TABLE IF EXISTS client;
 
 START TRANSACTION;
-
+    
 #
 # TABLE STRUCTURE FOR: client
 #
