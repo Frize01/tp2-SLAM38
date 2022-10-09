@@ -2,6 +2,7 @@
 
 namespace models;
 
+use PDO;
 use models\base\SQL;
 use models\classes\Client;
 
@@ -72,4 +73,7 @@ class ClientsModele extends SQL
         $stmt->execute([$clientId]);
         return $stmt->fetch(\PDO::FETCH_CLASS, Client::class);
     }
+
+    
+    
 }

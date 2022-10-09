@@ -11,4 +11,6 @@ class SampleWebController extends WebController
     {
         return Template::render("views/global/home.php", array("date" => date("d-m-Y à H:i")));
     }
+
+    
 }

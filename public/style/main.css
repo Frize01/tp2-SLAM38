@@ -1,0 +1,86 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300&display=swap');
+body{
+    background: rgb(224, 224, 224);
+}
+*{
+    font-family: 'Lato', sans-serif;
+}
+.flex{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+.bloc {
+    display: flex;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    margin: 1vw 2.5vw 1vw 2.5vw;
+    width:95%;
+    background-color: #fff;
+    border-radius: 20px;
+    align-self: center;
+}
+
+
+input{
+    background: rgba(0, 0, 0, 0);
+    border: 0px;
+    border-radius: 10px;
+    height: 50px;
+}
+
+.search{
+    width: 60vh;
+    min-width: 400px;
+    text-align: center;
+}
+
+table{
+    padding: 20px 20px 20px 20px;
+    width: 80%;
+    border-radius: 10px;
+}
+
+h1{
+    margin-left: 20px;
+    font-size: 25px;
+    font-weight:700 ;
+}
+
+th{
+    height: 60px;
+    border-bottom: rgb(199, 199, 199) solid 1.5px;
+    color:darkgrey;
+}
+
+td{
+    height: 50px;
+    position: relative;
+    
+}
+
+td i{
+    position: absolute;
+    padding-right: 10%;
+    right: 0px;
+    text-decoration: none;
+    color: black;
+}
+
+.greenBtn{
+    background: rgb(100, 230, 26);
+    color: white;
+    border-radius: 10px;
+    width: 90%;
+    height: 80%;
+    border : 2px solid rgb(83, 189, 21);
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.arrowPage{
+    margin-left: 20px;
+    margin-right: 20px;
+}
