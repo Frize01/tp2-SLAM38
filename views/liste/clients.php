@@ -23,10 +23,10 @@
         <?php 
         foreach($clients as $client){
             echo("<tr>
-                <td>".$client['id']."</td>
-                <td>".$client['nom'] . $client['prenom']."</td>
-                <td>".$client['email']."</td>
-                <td>".$client['telephone']."</td>
+                <td>".$client->getID()."</td>
+                <td>".$client->getNom() . $client->getPrenom()."</td>
+                <td>".$client->getEmail()."</td>
+                <td>".$client->getTelephone()."</td>
                 <td><i class='fa-solid fa-chevron-right'></i></td>
                 </tr>");
         }

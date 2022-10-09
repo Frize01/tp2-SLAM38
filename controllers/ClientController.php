@@ -16,7 +16,6 @@ class ClientController extends WebController
     {
         if($page<0){$page=0;}
         $clients = $this->clientModele->liste(10, $page);
-        var_dump($clients);
         return Template::render(
             "views\liste\clients.php",
             array("page" => $page, "clients" => $clients)

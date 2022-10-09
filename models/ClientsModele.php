@@ -73,4 +73,7 @@ class ClientsModele extends SQL
         $stmt->execute([$clientId]);
         return $stmt->fetch(\PDO::FETCH_CLASS, Client::class);
     }
+
+    
+    
 }
