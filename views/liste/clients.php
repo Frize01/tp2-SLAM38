@@ -36,10 +36,10 @@
 
     <div> 
         <?php if($page>0){
-            echo("<a class=arrowPage href=/?page=". $page-1 ."><i class='fa-solid fa-chevron-left'></i></a>");
+            echo("<a class=arrowPage href=/". $page-1 ."><i class='fa-solid fa-chevron-left'></i></a>");
         }
         
-        echo("<a class=arrowPage href=/?page=". $page+1 ."><i class='fa-solid fa-chevron-right'></i></a>");
+        echo("<a class=arrowPage href=/". $page+1 ."><i class='fa-solid fa-chevron-right'></i></a>");
         ?>
     </div>
 </div>
