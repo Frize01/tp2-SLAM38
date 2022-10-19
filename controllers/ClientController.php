@@ -12,13 +12,27 @@ class ClientController extends WebController
         $this->clientModele = new ClientsModele();
     }
 
-    function liste($page = 0): string
+    function liste($page, $search=""): string
     {
-        if($page<0){$page=0;}
-        $clients = $this->clientModele->liste(10, $page);
+        if($page == ""){$page = 0;}
+
+        $clients = $this->clientModele->recherche($search, 10, $page);
         return Template::render(
-            "views\liste\clients.php",
-            array("page" => $page, "clients" => $clients)
+            "views\client\liste.php",
+            array("page" => $page, "clients" => $clients, "search"=> $search)
         );
     }
+
+    function client($id = 0): string
+    {
+
+        $clients = $this->clientModele->getByClientId($id);
+        return Template::render(
+            "views\client\clientfiche.php",
+            array("clients" => $clients)
+        );
+    }
+
+
+
 }

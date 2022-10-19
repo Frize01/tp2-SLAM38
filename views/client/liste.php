@@ -1,5 +1,5 @@
 <div class="bloc flex">
-        <form action="/" method="get">
+        <form action="/liste/" method="get">
             <input type="submit" value="🔎">
             <input type="search" name="search" id="" class="search" placeholder="Rechercher un client">
         </form>
@@ -25,9 +25,9 @@
             echo("<tr>
                 <td>".$client->getID()."</td>
                 <td>".$client->getNom() . $client->getPrenom()."</td>
-                <td>".$client->getEmail()."</td>
                 <td>".$client->getTelephone()."</td>
-                <td><i class='fa-solid fa-chevron-right'></i></td>
+                <td>".$client->getEmail()."</td>
+                <td><a href='/client/".$client->getID()."'><i class='fa-solid fa-chevron-right'></i></td>
                 </tr>");
         }
     ?>
@@ -35,11 +35,13 @@
     </table>
 
     <div> 
-        <?php if($page>0){
-            echo("<a class=arrowPage href=/". $page-1 ."><i class='fa-solid fa-chevron-left'></i></a>");
+        <?php 
+        if($search!=""){$search = "?search=".$search;}
+        if($page>0){
+            echo("<a class=arrowPage href=/liste/". $page-1 . $search."><i class='fa-solid fa-chevron-left'></i></a>");
         }
         
-        echo("<a class=arrowPage href=/". $page+1 ."><i class='fa-solid fa-chevron-right'></i></a>");
+        echo("<a class=arrowPage href=/liste/". $page+1 . $search."><i class='fa-solid fa-chevron-right'></i></a>");
         ?>
     </div>
 </div>
