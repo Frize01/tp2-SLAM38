@@ -9,6 +9,7 @@
 </div>
 
 <div class="bloc flex">
+
     <table>
     <thead>
         <tr>
@@ -33,6 +34,7 @@
     ?>
     </tbody>
     </table>
+
 
     <div> 
         <?php 

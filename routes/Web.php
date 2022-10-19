@@ -16,7 +16,7 @@ class Web
         $main = new SampleWebController();
         $clientControleur = new ClientController();
 
-        // Route::Add('/', [$main, 'home']);
+        Route::Add('/', [$main, 'home']);
         Route::Add('/liste/{page}', [$clientControleur, 'liste']);
         Route::Add('/client/{id}', [$clientControleur, 'client']);
 
