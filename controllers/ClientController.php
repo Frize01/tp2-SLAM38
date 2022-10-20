@@ -3,6 +3,7 @@ namespace controllers;
 
 use utils\Template;
 use models\ClientsModele;
+use models\ProduitsModele;
 use controllers\base\WebController;
 
 class ClientController extends WebController
@@ -10,6 +11,7 @@ class ClientController extends WebController
     function __construct()
     {
         $this->clientModele = new ClientsModele();
+        $this->produitModel = new ProduitsModele();
     }
 
     function liste($page, $search=""): string
@@ -27,10 +29,23 @@ class ClientController extends WebController
     {
 
         $clients = $this->clientModele->getByClientId($id);
+        $produit = $this->produitModel->getAll();
         return Template::render(
             "views\client\clientfiche.php",
-            array("clients" => $clients)
+            array("clients" => $clients, "produits" => $produit)
         );
+    }
+
+    function ajoutProd($idClient, $selectProd){
+        if($selectProd!=0){
+            $this->produitModel->affecterProduit($selectProd, $idClient);
+        }
+        else{
+            session_start();
+            $_SESSION["erreur"] = "Aucun produit n'est séléctionné";
+            
+        }
+        header('Location: /client/'.$idClient);
     }
 
 

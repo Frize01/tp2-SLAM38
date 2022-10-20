@@ -10,7 +10,12 @@
 
 <div class="bloc fiche">
     <h2>Client / <?=$clients->getPrenom()?> <?=$clients->getNom()?> / Informations</h2>
-    
+    <?php 
+        if(isset($_SESSION["erreur"])){
+            echo("<h2 class='red'>".$_SESSION['erreur']."</h2>");
+            unset($_SESSION["erreur"]);
+        }
+    ?>
 </div>
 
 <div class="bloc fiche">
@@ -92,9 +97,17 @@
   <!-- Modal content -->
   <div class="modal-content">
     <span class="close close-prod">&times;</span>
-    div.
-    <h2>Bonjour</h2>
-    <input type="text" name="text" id="">
+    <form action="/<?=$clients->getId()?>/add-prod">
+        <h2>Ajouter un Produit</h2> <br>
+        <label for="prod">Produits : </label> <select name="selectProd" id="prod">
+            <option value="0">Selectionner une valeur</option>
+            <?php foreach($produits as $produit){?>
+            <option value="<?=$produit->id?>"><?=$produit->nom?></option>
+            <?php }?>
+        </select>
+        <input type="submit" class="modalBtn" value="Ajouter un produit">
+
+    </form>
   </div>
 
 </div>

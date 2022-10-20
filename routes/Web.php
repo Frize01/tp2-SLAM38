@@ -19,6 +19,7 @@ class Web
         Route::Add('/', [$main, 'home']);
         Route::Add('/liste/{page}', [$clientControleur, 'liste']);
         Route::Add('/client/{id}', [$clientControleur, 'client']);
+        Route::Add('/{idClient}/add-prod', [$clientControleur, 'ajoutProd']);
 
         //        Exemple de limitation d'accès à une page en fonction de la SESSION.
         //        if (SessionHelpers::isLogin()) {

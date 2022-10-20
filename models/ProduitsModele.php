@@ -70,6 +70,7 @@ class ProduitsModele extends SQL
     public function affecterProduit(int $idProduit, int $idClient){
         $query = "INSERT INTO commander(idProduit, idClient) VALUE (?, ?)";
         $stmt = SQL::getPdo()->prepare($query);
-        $stmt->execute([$idClient, $idProduit]);
+        $stmt->execute([$idProduit, $idClient]);
+
     }
 }

@@ -153,6 +153,7 @@ td i{
     overflow: auto; /* Enable scroll if needed */
     background-color: rgb(0,0,0); /* Fallback color */
     background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+    padding: 0px 100px;
   }
   
   /* Modal Content/Box */
@@ -161,7 +162,7 @@ td i{
     margin: 15% auto; /* 15% from the top and centered */
     padding: 20px;
     border: 1px solid #888;
-    width: 80%; /* Could be more or less, depending on screen size */
+    width: 50%; /* Could be more or less, depending on screen size */
   }
   
   /* The Close Button */
@@ -173,11 +174,40 @@ td i{
   }
   
   .close:hover,
-  .close:focus {
+  .close:focus{
     color: black;
     text-decoration: none;
     cursor: pointer;
   }
+
+  .modalBtn{
+    background: #82D67F;
+    color: #F2F3F8;
+    border-radius: 10px;
+    width: 30%;
+    height: 20%;
+    border : 2px solid #82D67F;
+    font-weight: bold;
+    font-size: 15px;
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+select{
+    height: 25px;
+    margin-bottom: 10%;
+    border-radius: 5px;
+    width: 80%;
+}
+
+.hidden{
+    display: unset;
+}
+
+.red{
+    color:red;
+}
 
 @media (max-width: 900px){
     .info{
