@@ -67,7 +67,7 @@
                 <th>Rue</th>
                 <th>Code Postal</th>
                 <th>Ville</th>
-                <th><button class="greenBtn"><i class="fa-solid fa-plus"></i> adresse</button></th>
+                <th><button id="addAdresse" class="greenBtn"><i class="fa-solid fa-plus"></i> adresse</button></th>
             </tr>
         </thead>
         <tbody>
@@ -91,8 +91,24 @@
 
   <!-- Modal content -->
   <div class="modal-content">
-    <span class="close">&times;</span>
+    <span class="close close-prod">&times;</span>
+    div.
+    <h2>Bonjour</h2>
+    <input type="text" name="text" id="">
+  </div>
+
+</div>
+
+<div id="modAddAdresse" class="modal">
+
+  <!-- Modal content -->
+  <div class="modal-content">
+    <span class="close close-add">&times;</span>
+    address
     <p>Some text in the Modal..</p>
   </div>
 
 </div>
+
+
+<script src="..\public\js\ficheClient.js"></script>
